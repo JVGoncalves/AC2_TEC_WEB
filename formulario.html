@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>AC 2 | Formulário</title>
+    <!-- LINKS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+      <div class="setaVoltar">
+           <a href="index.html"><img src="img/voltar.png" alt="Voltar" width="100%" height="100%" title="Voltar"></a>
+      </div>
+      <!-- TÍTULO DA PÁGINA -->
+      <div class="title_paginas">
+          Cadastro de Editoras
+      </div>
+
+    </header>
+    <div class="line"></div>
+    <!-- FORMULÁRIO -->
+    <div id="quadrado_form">
+      <form class="" action="formulario.html" method="post">
+        <div id="segura_inputs">
+          <input class="inputs_form" type="text" name="nomeEdiora" value="" placeholder="* Nome da Editora" required>
+          <input class="inputs_form" type="text" name="endereco" value="" placeholder="* Endereço" required>
+          <input class="input_cnpj_telefone" type="text" name="cnpj" onkeydown="javascript: fMasc(this, mCNPJ);" value="" placeholder="* CNPJ" maxlength="18" title="XX.XXX.XXX/XXXX-XX" required>
+          <input class="input_site_nomecontato" type="text" name="site" value="" placeholder="* Site" required>
+          <input class="inputs_form" type="email" name="email" value="" placeholder="* E-mail" required>
+          <input class="input_cnpj_telefone" type="text" name="tel" onkeydown="javascript: fMasc(this, mTel);" value="" placeholder="* Telefone" maxlength="13" title="(XX)XXXX-XXXX" required>
+          <input class="input_site_nomecontato" type="text" name="nomeContato" value="" placeholder="* Nome do contato" required>
+          <font style="font-size: 13px; color: red;">* preenchimento obrigatório</font> <br> <br>
+
+          <b>Gênero de publicações:</b>
+          <!-- CHECKBOX -->
+          <div class="checks">
+            <div class="segura_radios">
+              <input type="checkbox" name="rd" value="male"> Policial <br>
+              <input type="checkbox" name="rd" value="female"> Ficção <br>
+              <input type="checkbox" name="rd" value="other"> Não ficção <br>
+            </div>
+
+            <div class="segura_radios">
+              <input type="checkbox" name="rd" value="male"> Religioso <br>
+              <input type="checkbox" name="rd" value="female"> Esporte <br>
+              <input type="checkbox" name="rd" value="other"> Profissional <br>
+            </div>
+
+            <div class="segura_radios">
+              <input type="checkbox" name="rd" value="male"> Outros <br>
+            </div>
+          </div>
+          <!-- BOTÃO -->
+          <div class="segura_botao">
+            <button class="botao_form" type="submit" name="btEnviar" value="">Cadastrar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- SCRIPT -->
+    <script src="js/mascara.js"></script>
+  </body>
+</html>
